@@ -1,0 +1,25 @@
+@import com.github.mather.study20180317.model.ItemStock
+@(stock: ItemStock)
+<html>
+<head>
+
+</head>
+<body>
+<h1>書籍詳細</h1>
+
+<table>
+    <tr>
+        <th>書籍名</th>
+        <td>@stock.item.name</td>
+    </tr>
+    <tr>
+        <th>ISBN</th>
+        <td>@stock.item.isbn</td>
+    </tr>
+    <tr>
+        <th>在庫</th>
+        <td>在庫: @stock.showStock</td>
+    </tr>
+</table>
+</body>
+</html>

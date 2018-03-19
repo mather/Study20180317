@@ -1,0 +1,25 @@
+@import com.github.mather.study20180317.model.ItemStock
+@(stocks: Seq[ItemStock])
+<html>
+<head>
+
+</head>
+<body>
+<h1>書籍情報一覧</h1>
+
+<table>
+    <tr>
+        <th>書籍名</th>
+        <th>ISBN</th>
+        <th>在庫</th>
+    </tr>
+    @for(stock <- stocks) {
+    <tr>
+        <td><a href="/@stock.item.id">@stock.item.name</a></td>
+        <td>@stock.item.isbn</td>
+        <td>@stock.showStock</td>
+    </tr>
+    }
+</table>
+</body>
+</html>
